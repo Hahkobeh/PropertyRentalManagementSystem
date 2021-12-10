@@ -36,6 +36,7 @@ public class Property {
         this.propertyID = prop.getObjectId("_id");
         this.status = prop.getInteger("STATUS");
         this.landlord = prop.getString("LANDLORD");
+        this.quadrant = prop.getString("QUADRANT");
         this.payedFor = prop.getBoolean("PAYEDFOR");
         this.outstandingFee = prop.getDouble("OUTSTANDINGFEE");
         this.numBedrooms = prop.getInteger("NUMBEDROOMS");

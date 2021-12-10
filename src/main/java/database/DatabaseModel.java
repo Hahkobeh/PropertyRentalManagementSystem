@@ -127,11 +127,11 @@ public class DatabaseModel {
                 }
                 case 2: {
                     MongoCursor<Document> cursor = propertiesCollection.find(eq("LANDLORD",(String) user.get("EMAIL"))).iterator();
-                    ArrayList<ObjectId> propIds = new ArrayList<>();
+                    ArrayList<Property> props = new ArrayList<>();
                     while(cursor.hasNext()) {
-                        propIds.add((ObjectId) cursor.next().get("_id"));
+                        props.add(new Property(cursor.next()));
                     }
-                    this.user = new Landlord((String) user.get("EMAIL"), (String) user.get("PASSWORD"),propIds);
+                    this.user = new Landlord((String) user.get("EMAIL"), (String) user.get("PASSWORD"),props);
                     return true;
                 }
                 case 3: {
