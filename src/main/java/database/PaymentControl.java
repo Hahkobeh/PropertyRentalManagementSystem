@@ -45,9 +45,16 @@ public class PaymentControl {
         }
 
     }
+    void editPeriod(int newPeriod){
+        period = newPeriod;
+        Bson temp = Updates.set("PERIOD",newPeriod);
+        paymentDetails.updateOne(exists("PERIOD"),temp);
+    }
 
-    void editFee(){
-
+    void editFee(double newFee){
+        cost = newFee;
+        Bson temp = Updates.set("COST",newFee);
+        paymentDetails.updateOne(exists("COST"),temp);
     }
 
     public boolean payForProperty(double amountPayed, ObjectId id){
