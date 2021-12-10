@@ -611,11 +611,7 @@ public class View extends javax.swing.JFrame {
                 PasswordRegisterText.setText("Password");
 
                 RegisterNewUserButton.setText("Register");
-                RegisterNewUserButton.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                RegisterNewUserButtonActionPerformed(evt);
-                        }
-                });
+
 
                 ResetRegisterButton.setText("Reset");
                 ResetRegisterButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1045,11 +1041,7 @@ public class View extends javax.swing.JFrame {
 
                 LoginButton.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
                 LoginButton.setText("Login");
-                LoginButton.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                LoginButtonActionPerformed(evt);
-                        }
-                });
+
 
                 ResetButton.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
                 ResetButton.setText("Reset");
@@ -1547,11 +1539,6 @@ public class View extends javax.swing.JFrame {
                 // TODO add your handling code here:
         }
 
-        private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {
-                // TODO add your handling code here:
-                LoginCheck();
-
-        }
 
         private void ResetButtonActionPerformed(java.awt.event.ActionEvent evt) {
                 // TODO add your handling code here:
@@ -1563,12 +1550,7 @@ public class View extends javax.swing.JFrame {
                 GoLogin();
         }
 
-        private void RegisterNewUserButtonActionPerformed(java.awt.event.ActionEvent evt) {
-                usertype = ComboRegisterBox.getSelectedItem() + "";
-                GoRMain();
 
-                // System.out.println("Account type: "+ComboRegisterBox.getSelectedItem());
-        }
 
         private void ComboRegisterBoxActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -2007,8 +1989,7 @@ public class View extends javax.swing.JFrame {
                 // dispose();
                 LoginPage.setVisible(false);
                 RegisterPage.setVisible(false);
-                MainPage.pack();
-                MainPage.setVisible(true);
+                GoRMain();
         }
 
         public void failedLogin() {
