@@ -24,8 +24,8 @@ public class PaymentControl {
         propertiesCollection = propCol;
         paymentDetails = pd;
 
-        Document sysDetailsTemp = new Document("PERIOD",30).append("PERIODSTART", "2021-11-18").append("COST",(double)100.00);
-        paymentDetails.insertOne(sysDetailsTemp);
+        /*Document sysDetailsTemp = new Document("PERIOD",30).append("PERIODSTART", "2021-11-18").append("COST",(double)100.00);
+        paymentDetails.insertOne(sysDetailsTemp);*/
         getDate();
         getDetails();
 
