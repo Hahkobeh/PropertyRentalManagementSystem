@@ -22,6 +22,7 @@ public class Controller {
 
         view.getRegisterNewUserButton().addActionListener(new RegisterButton());
         view.getLoginButton().addActionListener(new LoginButton());
+        view.getTheReportButton().addActionListener( new GetReportButton());
 
         //view.getSearchButton().addActionListener(new SearchButton());
 
@@ -33,12 +34,12 @@ public class Controller {
 
     //admin edit fee / period
 
-
     public class GetReportButton implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             StringBuilder temp = model.makeReport();
+            System.out.println("hello");
+            view.setSummaryText(temp.toString());
 
-            //view.setText
         }
     }
 
@@ -80,6 +81,8 @@ public class Controller {
 
         }
     }
+
+
 
     //for logging in
     public class LoginButton implements ActionListener{

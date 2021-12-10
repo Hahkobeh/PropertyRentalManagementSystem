@@ -2001,6 +2001,16 @@ public class View extends javax.swing.JFrame {
                 return LoginButton;
         }
 
+        //FOR SUMMARY
+        public JButton getTheReportButton() {
+                // the method should be called by controller
+                return RequestSummmaryButton; // returns the button to the controller
+        }
+        public void setSummaryText(String output) {
+                System.out.println("in summary text, 3");
+                SummaryText.setText(output);
+        }
+
         // EXTRA
         public void throwError(String error) {
                 JOptionPane.showMessageDialog(this, error);
