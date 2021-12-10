@@ -24,8 +24,8 @@ public class PaymentControl {
         propertiesCollection = propCol;
         paymentDetails = pd;
 
-        Document sysDetailsTemp = new Document("PERIOD",30).append("PERIODSTART", "2021-11-18").append("COST",(double)100.00);
-        paymentDetails.insertOne(sysDetailsTemp);
+        /*Document sysDetailsTemp = new Document("PERIOD",30).append("PERIODSTART", "2021-11-18").append("COST",(double)100.00);
+        paymentDetails.insertOne(sysDetailsTemp);*/
         getDate();
         getDetails();
 
@@ -45,9 +45,16 @@ public class PaymentControl {
         }
 
     }
+    void editPeriod(int newPeriod){
+        period = newPeriod;
+        Bson temp = Updates.set("PERIOD",newPeriod);
+        paymentDetails.updateOne(exists("PERIOD"),temp);
+    }
 
-    void editFee(){
-
+    void editFee(double newFee){
+        cost = newFee;
+        Bson temp = Updates.set("COST",newFee);
+        paymentDetails.updateOne(exists("COST"),temp);
     }
 
     public boolean payForProperty(double amountPayed, ObjectId id){

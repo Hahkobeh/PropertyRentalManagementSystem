@@ -71,7 +71,8 @@ public class Controller {
             String password = view.getPasswordRegisterField();
             //System.out.println(accessLevel +" "+ email +" "+ password);
             if(model.addUser(accessLevel,email,password)){
-                view.GoRMain();
+                view.successfulLogin(model.getAccountType());
+
             }else{
                 view.throwError("That email is already tied to an account!");
             }
@@ -84,11 +85,13 @@ public class Controller {
     public class LoginButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
+            System.out.println("Login attempted");
             String username = view.getUsernameField();
             String password = view.getPasswordField();
+
             System.out.println(username+" "+password);
             if(model.login(username,password)){
-                view.successfulLogin();
+                view.successfulLogin(model.getAccountType());
             }else{
                 view.failedLogin();
                 view.throwError("Login was unsuccessful!");
