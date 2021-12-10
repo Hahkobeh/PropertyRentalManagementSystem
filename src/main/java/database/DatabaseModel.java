@@ -32,9 +32,6 @@ public class DatabaseModel {
 
 
         connectToDatabase();
-
-
-
         //System.out.println(test.getAccessLevel());
     }
 
@@ -75,6 +72,22 @@ public class DatabaseModel {
 
 
     }
+
+    public String getAccountType(){
+        switch (user.getAccessLevel()){
+            case 1:
+                return "Renter";
+            case 2:
+                return "Landlord";
+            case 3:
+                return "Manager";
+            default:
+                return "unregistered";
+        }
+
+    }
+
+
     boolean hasAccess(int requiredAccess){
         return requiredAccess == user.getAccessLevel();
     }
