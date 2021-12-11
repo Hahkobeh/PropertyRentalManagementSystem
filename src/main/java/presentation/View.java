@@ -22,7 +22,13 @@ public class View extends javax.swing.JFrame {
 
         Object[] data = {
                         new Integer(5), 6,
-                        "good", new Boolean(false), new Double(105.78)
+                        "good", new Boolean(false), new Double(105.78), "NW"
+
+        };
+
+        Object[] data2 = {
+                        new Integer(5), 6,
+                        "good", new Boolean(false), new Double(105.78), "NW", "Hello@gmail.com"
 
         };
 
@@ -41,8 +47,6 @@ public class View extends javax.swing.JFrame {
 
                 for (int i = 0; i < 5; i++) {
                         setRecordsMain(data);
-                        setRecordsManager(data);
-                        TableManager.getSelectedRow();
                 }
 
         }
@@ -58,9 +62,10 @@ public class View extends javax.swing.JFrame {
 
                 MainPage = new javax.swing.JFrame();
                 PropietyTitle = new javax.swing.JLabel();
-                ViewMainButton = new javax.swing.JButton();
+                MainEmailButton = new javax.swing.JButton();
                 ScrollPaneMain = new javax.swing.JScrollPane();
                 TableMain = new javax.swing.JTable();
+                SearchButton = new javax.swing.JButton();
                 AddPropertyPage = new javax.swing.JFrame();
                 BackLAddProp = new javax.swing.JButton();
                 NewPropTitle = new javax.swing.JLabel();
@@ -70,12 +75,12 @@ public class View extends javax.swing.JFrame {
                 QuadrantText = new javax.swing.JLabel();
                 QuadrantInputBox = new javax.swing.JComboBox<>();
                 PropertyTypeNewPropText = new javax.swing.JLabel();
-                PropTypeNewPropField = new javax.swing.JTextField();
                 PriceText = new javax.swing.JLabel();
                 PriceField = new javax.swing.JTextField();
                 NewPropSubmitButton = new javax.swing.JButton();
                 NumbBathroomstext = new javax.swing.JLabel();
                 NumbBathroomField = new javax.swing.JSpinner();
+                PropTypeNewPropField = new javax.swing.JComboBox<>();
                 PayFeesPage = new javax.swing.JFrame();
                 BackLPayFees = new javax.swing.JButton();
                 DepositText = new javax.swing.JLabel();
@@ -87,6 +92,8 @@ public class View extends javax.swing.JFrame {
                 BackLEditListing = new javax.swing.JButton();
                 ScrollPaneMain1 = new javax.swing.JScrollPane();
                 TableMain1 = new javax.swing.JTable();
+                EditYourListings = new javax.swing.JLabel();
+                EditLandlordListingButton = new javax.swing.JButton();
                 RegisterPage = new javax.swing.JFrame();
                 RegisterTitle = new javax.swing.JLabel();
                 EmailRegisterField = new javax.swing.JTextField();
@@ -100,16 +107,16 @@ public class View extends javax.swing.JFrame {
                 jButton1 = new javax.swing.JButton();
                 ChangeFeesPage = new javax.swing.JFrame();
                 BackFees = new javax.swing.JButton();
-                FeesManagerText = new javax.swing.JLabel();
-                FeesManagerField = new javax.swing.JTextField();
+                FeesAdminText = new javax.swing.JLabel();
+                FeesAdminField = new javax.swing.JTextField();
                 ChangeFeesTitle = new javax.swing.JLabel();
                 Changefeesbutton = new javax.swing.JButton();
                 PeriodText = new javax.swing.JLabel();
                 PeriodField = new javax.swing.JTextField();
-                ManagerDashboardPage = new javax.swing.JFrame();
-                ManagerDashboardText = new javax.swing.JLabel();
-                GoMainPageManagerButton = new javax.swing.JButton();
-                EditListingsManagerButton = new javax.swing.JButton();
+                AdminDashboardPage = new javax.swing.JFrame();
+                AdminDashboardText = new javax.swing.JLabel();
+                GoMainPageAdminButton = new javax.swing.JButton();
+                EditListingsAdminButton = new javax.swing.JButton();
                 ChnageFeesButton = new javax.swing.JButton();
                 RequestSummmaryButton = new javax.swing.JButton();
                 LandlordDashboardPage = new javax.swing.JFrame();
@@ -127,16 +134,16 @@ public class View extends javax.swing.JFrame {
                 LoginButton = new javax.swing.JButton();
                 ResetButton = new javax.swing.JButton();
                 LoginBack = new javax.swing.JButton();
-                EditListingPageManager = new javax.swing.JFrame();
+                EditListingPageAdmin = new javax.swing.JFrame();
                 BackAEditListings = new javax.swing.JButton();
-                ScrollPaneManager = new javax.swing.JScrollPane();
-                TableManager = new javax.swing.JTable();
-                EditButtonManagerLis = new javax.swing.JButton();
+                ScrollPaneAdmin = new javax.swing.JScrollPane();
+                TableAdmin = new javax.swing.JTable();
+                EditButtonAdminLis = new javax.swing.JButton();
                 SummaryPage = new javax.swing.JFrame();
                 BackSummaryButton = new javax.swing.JButton();
                 SummaryText = new javax.swing.JLabel();
-                EditPropertyManager = new javax.swing.JFrame();
-                BackManagerEditProp = new javax.swing.JButton();
+                EditPropertyAdmin = new javax.swing.JFrame();
+                BackAdminEditProp = new javax.swing.JButton();
                 NewPropTitle1 = new javax.swing.JLabel();
                 NumbBedText1 = new javax.swing.JLabel();
                 NumbBedSpinner1 = new javax.swing.JSpinner();
@@ -144,24 +151,51 @@ public class View extends javax.swing.JFrame {
                 QuadrantText1 = new javax.swing.JLabel();
                 QuadrantInputBox1 = new javax.swing.JComboBox<>();
                 PropertyTypeNewPropText1 = new javax.swing.JLabel();
-                PropTypeNewPropField1 = new javax.swing.JTextField();
                 PriceText1 = new javax.swing.JLabel();
                 PriceField1 = new javax.swing.JTextField();
                 NewPropSubmitButton1 = new javax.swing.JButton();
                 NumbBathroomstext1 = new javax.swing.JLabel();
                 NumbBathroomField1 = new javax.swing.JSpinner();
+                PropTypeNewPropField1 = new javax.swing.JComboBox<>();
+                SearchPage = new javax.swing.JFrame();
+                BackLAddProp1 = new javax.swing.JButton();
+                NewPropTitle2 = new javax.swing.JLabel();
+                NumbBedTextSearch = new javax.swing.JLabel();
+                NumbBedSpinner2 = new javax.swing.JSpinner();
+                FurnishedBox2 = new javax.swing.JCheckBox();
+                QuadrantText2 = new javax.swing.JLabel();
+                QuadrantInputBox2 = new javax.swing.JComboBox<>();
+                PropertyTypeNewPropText2 = new javax.swing.JLabel();
+                PriceText2 = new javax.swing.JLabel();
+                PriceField2 = new javax.swing.JTextField();
+                SearchButtonSubmit = new javax.swing.JButton();
+                NumbBathTextSearch = new javax.swing.JLabel();
+                NumbBathroomField2 = new javax.swing.JSpinner();
+                SearchNumbBath = new javax.swing.JRadioButton();
+                SearchNumbBed = new javax.swing.JRadioButton();
+                SearchPrice = new javax.swing.JRadioButton();
+                SearchQuad = new javax.swing.JRadioButton();
+                SearchPropType = new javax.swing.JRadioButton();
+                SearchFurn = new javax.swing.JRadioButton();
+                PropTypeNewPropField2 = new javax.swing.JComboBox<>();
+                MainPageManager = new javax.swing.JFrame();
+                PropietyTitle1 = new javax.swing.JLabel();
+                ScrollPaneMain2 = new javax.swing.JScrollPane();
+                TableMain2 = new javax.swing.JTable();
+                SearchButton1 = new javax.swing.JButton();
+                jButton2 = new javax.swing.JButton();
                 LoginHomeButton = new javax.swing.JToggleButton();
                 RegisterHomeButton = new javax.swing.JToggleButton();
                 EnterHomeButton = new javax.swing.JToggleButton();
                 WelcomeText = new javax.swing.JLabel();
 
-                PropietyTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+                PropietyTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
                 PropietyTitle.setText("Properties");
 
-                ViewMainButton.setText("View");
-                ViewMainButton.addActionListener(new java.awt.event.ActionListener() {
+                MainEmailButton.setText("Email");
+                MainEmailButton.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                ViewMainButtonActionPerformed(evt);
+                                MainEmailButtonActionPerformed(evt);
                         }
                 });
 
@@ -170,14 +204,15 @@ public class View extends javax.swing.JFrame {
 
                                 },
                                 new String[] {
-                                                "Bedrooms", "Bathrooms", "Property Type", "Furnished", "Price"
+                                                "Bedrooms", "Bathrooms", "Property Type", "Furnished", "Price",
+                                                "Quadrant"
                                 }) {
                         Class[] types = new Class[] {
                                         java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class,
-                                        java.lang.Boolean.class, java.lang.Double.class
+                                        java.lang.Boolean.class, java.lang.Double.class, java.lang.String.class
                         };
                         boolean[] canEdit = new boolean[] {
-                                        false, false, false, false, false
+                                        false, false, false, false, false, false
                         };
 
                         public Class getColumnClass(int columnIndex) {
@@ -192,49 +227,71 @@ public class View extends javax.swing.JFrame {
                 TableMain.getColumnModel().getSelectionModel()
                                 .setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
+                SearchButton.setText("Search");
+                SearchButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchButtonActionPerformed(evt);
+                        }
+                });
+
                 javax.swing.GroupLayout MainPageLayout = new javax.swing.GroupLayout(MainPage.getContentPane());
                 MainPage.getContentPane().setLayout(MainPageLayout);
                 MainPageLayout.setHorizontalGroup(
                                 MainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(MainPageLayout.createSequentialGroup()
-                                                                .addGap(19, 19, 19)
-                                                                .addGroup(MainPageLayout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addComponent(PropietyTitle,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                107,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(ScrollPaneMain,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                613,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                .addContainerGap(57, Short.MAX_VALUE))
                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainPageLayout
                                                                 .createSequentialGroup()
-                                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                .addGap(57, 57, 57)
+                                                                .addComponent(SearchButton,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                105,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                 Short.MAX_VALUE)
-                                                                .addComponent(ViewMainButton,
+                                                                .addComponent(MainEmailButton,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 73,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(84, 84, 84)));
+                                                                .addGap(76, 76, 76))
+                                                .addGroup(MainPageLayout.createSequentialGroup()
+                                                                .addGroup(MainPageLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(MainPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(27, 27, 27)
+                                                                                                .addComponent(ScrollPaneMain,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                613,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                .addGroup(MainPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(41, 41, 41)
+                                                                                                .addComponent(PropietyTitle,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                156,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                .addContainerGap(49, Short.MAX_VALUE)));
                 MainPageLayout.setVerticalGroup(
                                 MainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(MainPageLayout.createSequentialGroup()
-                                                                .addGap(17, 17, 17)
+                                                                .addGap(40, 40, 40)
                                                                 .addComponent(PropietyTitle,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                34,
+                                                                                37,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(18, 18, 18)
+                                                                .addGap(18, 18, Short.MAX_VALUE)
                                                                 .addComponent(ScrollPaneMain,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 348,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addPreferredGap(
                                                                                 javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(ViewMainButton)
-                                                                .addContainerGap(127, Short.MAX_VALUE)));
+                                                                .addGroup(MainPageLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                .addComponent(MainEmailButton)
+                                                                                .addComponent(SearchButton))
+                                                                .addGap(68, 68, 68)));
 
                 BackLAddProp.setText("Back");
                 BackLAddProp.addActionListener(new java.awt.event.ActionListener() {
@@ -269,9 +326,17 @@ public class View extends javax.swing.JFrame {
                 PriceText.setText("Price");
 
                 NewPropSubmitButton.setText("Submit");
+                NewPropSubmitButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                NewPropSubmitButtonActionPerformed(evt);
+                        }
+                });
 
                 NumbBathroomstext.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
                 NumbBathroomstext.setText("Number of bathrooms");
+
+                PropTypeNewPropField.setModel(new javax.swing.DefaultComboBoxModel<>(
+                                new String[] { "Condo", "Townhouse", "Apartment" }));
 
                 javax.swing.GroupLayout AddPropertyPageLayout = new javax.swing.GroupLayout(
                                 AddPropertyPage.getContentPane());
@@ -282,86 +347,81 @@ public class View extends javax.swing.JFrame {
                                                                 .addGap(77, 77, 77)
                                                                 .addGroup(AddPropertyPageLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addGroup(AddPropertyPageLayout
-                                                                                                .createSequentialGroup()
-                                                                                                .addComponent(NumbBathroomstext)
-                                                                                                .addContainerGap(
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                Short.MAX_VALUE))
+                                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                AddPropertyPageLayout
+                                                                                                                .createSequentialGroup()
+                                                                                                                .addComponent(NewPropTitle,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                273,
+                                                                                                                                Short.MAX_VALUE)
+                                                                                                                .addGap(57, 57, 57)
+                                                                                                                .addComponent(BackLAddProp)
+                                                                                                                .addGap(29, 29, 29))
                                                                                 .addGroup(AddPropertyPageLayout
                                                                                                 .createSequentialGroup()
                                                                                                 .addGroup(AddPropertyPageLayout
                                                                                                                 .createParallelGroup(
-                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addComponent(NumbBathroomstext)
+                                                                                                                .addComponent(FurnishedBox,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                87,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                                                 .addGroup(AddPropertyPageLayout
                                                                                                                                 .createSequentialGroup()
-                                                                                                                                .addComponent(FurnishedBox,
-                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                87,
-                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                .addGap(71, 71, 71))
-                                                                                                                .addGroup(AddPropertyPageLayout
-                                                                                                                                .createParallelGroup(
-                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                .addComponent(NewPropTitle,
-                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                                                316,
-                                                                                                                                                Short.MAX_VALUE)
                                                                                                                                 .addGroup(AddPropertyPageLayout
-                                                                                                                                                .createSequentialGroup()
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                .addComponent(NumbBedText,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                135,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(QuadrantText,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                70,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(PropertyTypeNewPropText,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                103,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(PriceText,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                41,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(NewPropSubmitButton,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                97,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                                                .addGap(38, 38, 38)
+                                                                                                                                .addGroup(AddPropertyPageLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                .addComponent(QuadrantInputBox,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                64,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(PriceField,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                72,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                                                                                 .addGroup(AddPropertyPageLayout
                                                                                                                                                                 .createParallelGroup(
+                                                                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                                                                                                false)
+                                                                                                                                                                .addComponent(NumbBathroomField,
                                                                                                                                                                                 javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                                                .addComponent(NumbBedText,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                135,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(QuadrantText,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                70,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(PropertyTypeNewPropText,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                103,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(PriceText,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                41,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(NewPropSubmitButton,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                97,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                                                                                .addGap(38, 38, 38)
-                                                                                                                                                .addGroup(AddPropertyPageLayout
-                                                                                                                                                                .createParallelGroup(
-                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                                                .addComponent(QuadrantInputBox,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                64,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(PropTypeNewPropField,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                72,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(PriceField,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                72,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addGroup(AddPropertyPageLayout
-                                                                                                                                                                                .createParallelGroup(
-                                                                                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                                                                                                                                                false)
-                                                                                                                                                                                .addComponent(NumbBathroomField,
-                                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                                                                .addComponent(NumbBedSpinner,
-                                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                                                                                                57,
-                                                                                                                                                                                                Short.MAX_VALUE))))))
-                                                                                                .addGap(25, 25, 25)
-                                                                                                .addComponent(BackLAddProp)
-                                                                                                .addGap(18, 18, 18)))));
+                                                                                                                                                                .addComponent(NumbBedSpinner,
+                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                                                57,
+                                                                                                                                                                                Short.MAX_VALUE))
+                                                                                                                                                .addComponent(PropTypeNewPropField,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                101,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                                                                .addContainerGap(
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                Short.MAX_VALUE)))));
                 AddPropertyPageLayout.setVerticalGroup(
                                 AddPropertyPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(AddPropertyPageLayout.createSequentialGroup()
@@ -412,8 +472,7 @@ public class View extends javax.swing.JFrame {
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addGap(25, 25, 25)
                                                                 .addGroup(AddPropertyPageLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.LEADING)
                                                                                 .addComponent(PriceText)
@@ -425,7 +484,7 @@ public class View extends javax.swing.JFrame {
                                                                 .addComponent(FurnishedBox)
                                                                 .addGap(41, 41, 41)
                                                                 .addComponent(NewPropSubmitButton)
-                                                                .addContainerGap(52, Short.MAX_VALUE)));
+                                                                .addContainerGap(41, Short.MAX_VALUE)));
 
                 BackLPayFees.setText("Back");
                 BackLPayFees.addActionListener(new java.awt.event.ActionListener() {
@@ -543,14 +602,15 @@ public class View extends javax.swing.JFrame {
 
                                 },
                                 new String[] {
-                                                "Bedrooms", "Bathrooms", "Property Type", "Furnished", "Price"
+                                                "Bedrooms", "Bathrooms", "Property Type", "Furnished", "Price",
+                                                "Quadrant"
                                 }) {
                         Class[] types = new Class[] {
                                         java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class,
-                                        java.lang.Boolean.class, java.lang.Double.class
+                                        java.lang.Boolean.class, java.lang.Double.class, java.lang.String.class
                         };
                         boolean[] canEdit = new boolean[] {
-                                        false, false, false, false, false
+                                        false, false, false, false, false, false
                         };
 
                         public Class getColumnClass(int columnIndex) {
@@ -565,37 +625,80 @@ public class View extends javax.swing.JFrame {
                 TableMain1.getColumnModel().getSelectionModel()
                                 .setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
+                EditYourListings.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+                EditYourListings.setText("Edit Your Listings");
+
+                EditLandlordListingButton.setText("Edit");
+                EditLandlordListingButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                EditLandlordListingButtonActionPerformed(evt);
+                        }
+                });
+
                 javax.swing.GroupLayout EditListingPageLandlordLayout = new javax.swing.GroupLayout(
                                 EditListingPageLandlord.getContentPane());
                 EditListingPageLandlord.getContentPane().setLayout(EditListingPageLandlordLayout);
                 EditListingPageLandlordLayout.setHorizontalGroup(
                                 EditListingPageLandlordLayout
                                                 .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                EditListingPageLandlordLayout.createSequentialGroup()
-                                                                                .addContainerGap(565, Short.MAX_VALUE)
-                                                                                .addComponent(BackLEditListing)
-                                                                                .addContainerGap())
                                                 .addGroup(EditListingPageLandlordLayout.createSequentialGroup()
                                                                 .addGap(37, 37, 37)
                                                                 .addComponent(ScrollPaneMain1,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 543,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                Short.MAX_VALUE)));
+                                                                .addContainerGap(45, Short.MAX_VALUE))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                EditListingPageLandlordLayout.createSequentialGroup()
+                                                                                .addContainerGap(
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE)
+                                                                                .addGroup(EditListingPageLandlordLayout
+                                                                                                .createParallelGroup(
+                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                                EditListingPageLandlordLayout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addComponent(EditYourListings,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                264,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                .addGap(135, 135,
+                                                                                                                                                135)
+                                                                                                                                .addComponent(BackLEditListing)
+                                                                                                                                .addContainerGap())
+                                                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                                EditListingPageLandlordLayout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addComponent(EditLandlordListingButton,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                73,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                .addGap(84, 84, 84)))));
                 EditListingPageLandlordLayout.setVerticalGroup(
                                 EditListingPageLandlordLayout
                                                 .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(EditListingPageLandlordLayout.createSequentialGroup()
                                                                 .addContainerGap()
-                                                                .addComponent(BackLEditListing)
-                                                                .addGap(38, 38, 38)
+                                                                .addGroup(EditListingPageLandlordLayout
+                                                                                .createParallelGroup(
+                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(BackLEditListing)
+                                                                                .addGroup(EditListingPageLandlordLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(6, 6, 6)
+                                                                                                .addComponent(EditYourListings,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                42,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                .addGap(18, 18, 18)
                                                                 .addComponent(ScrollPaneMain1,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 315,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addContainerGap(87, Short.MAX_VALUE)));
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(EditLandlordListingButton)
+                                                                .addContainerGap(41, Short.MAX_VALUE)));
 
                 RegisterTitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
                 RegisterTitle.setText("Register");
@@ -781,8 +884,8 @@ public class View extends javax.swing.JFrame {
                         }
                 });
 
-                FeesManagerText.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-                FeesManagerText.setText("Fees");
+                FeesAdminText.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+                FeesAdminText.setText("Fees");
 
                 ChangeFeesTitle.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
                 ChangeFeesTitle.setText("Change Fees & Period");
@@ -825,13 +928,13 @@ public class View extends javax.swing.JFrame {
                                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                                 .addGroup(ChangeFeesPageLayout
                                                                                                                 .createSequentialGroup()
-                                                                                                                .addComponent(FeesManagerText,
+                                                                                                                .addComponent(FeesAdminText,
                                                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                                                 41,
                                                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                                                 .addPreferredGap(
                                                                                                                                 javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                                                                .addComponent(FeesManagerField,
+                                                                                                                .addComponent(FeesAdminField,
                                                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                                                 72,
                                                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -865,8 +968,8 @@ public class View extends javax.swing.JFrame {
                                                                 .addGap(46, 46, 46)
                                                                 .addGroup(ChangeFeesPageLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                .addComponent(FeesManagerText)
-                                                                                .addComponent(FeesManagerField,
+                                                                                .addComponent(FeesAdminText)
+                                                                                .addComponent(FeesAdminField,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -884,20 +987,20 @@ public class View extends javax.swing.JFrame {
                                                                 .addComponent(Changefeesbutton)
                                                                 .addGap(39, 39, 39)));
 
-                ManagerDashboardText.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-                ManagerDashboardText.setText("Manager Dashboard");
+                AdminDashboardText.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+                AdminDashboardText.setText("Manager Dashboard");
 
-                GoMainPageManagerButton.setText("Go to Main Page");
-                GoMainPageManagerButton.addActionListener(new java.awt.event.ActionListener() {
+                GoMainPageAdminButton.setText("Go to Main Page");
+                GoMainPageAdminButton.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                GoMainPageManagerButtonActionPerformed(evt);
+                                GoMainPageAdminButtonActionPerformed(evt);
                         }
                 });
 
-                EditListingsManagerButton.setText("Edit Listings");
-                EditListingsManagerButton.addActionListener(new java.awt.event.ActionListener() {
+                EditListingsAdminButton.setText("Edit Listings");
+                EditListingsAdminButton.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                EditListingsManagerButtonActionPerformed(evt);
+                                EditListingsAdminButtonActionPerformed(evt);
                         }
                 });
 
@@ -915,45 +1018,46 @@ public class View extends javax.swing.JFrame {
                         }
                 });
 
-                javax.swing.GroupLayout ManagerDashboardPageLayout = new javax.swing.GroupLayout(
-                                ManagerDashboardPage.getContentPane());
-                ManagerDashboardPage.getContentPane().setLayout(ManagerDashboardPageLayout);
-                ManagerDashboardPageLayout.setHorizontalGroup(
-                                ManagerDashboardPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(ManagerDashboardPageLayout.createSequentialGroup()
-                                                                .addGap(27, 27, 27)
-                                                                .addComponent(GoMainPageManagerButton)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(EditListingsManagerButton)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(ChnageFeesButton)
-                                                                .addGap(26, 26, 26)
-                                                                .addComponent(RequestSummmaryButton)
+                javax.swing.GroupLayout AdminDashboardPageLayout = new javax.swing.GroupLayout(
+                                AdminDashboardPage.getContentPane());
+                AdminDashboardPage.getContentPane().setLayout(AdminDashboardPageLayout);
+                AdminDashboardPageLayout.setHorizontalGroup(
+                                AdminDashboardPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(AdminDashboardPageLayout.createSequentialGroup()
+                                                                .addGroup(AdminDashboardPageLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(AdminDashboardPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(27, 27, 27)
+                                                                                                .addComponent(GoMainPageAdminButton)
+                                                                                                .addGap(18, 18, 18)
+                                                                                                .addComponent(EditListingsAdminButton)
+                                                                                                .addGap(18, 18, 18)
+                                                                                                .addComponent(ChnageFeesButton)
+                                                                                                .addGap(26, 26, 26)
+                                                                                                .addComponent(RequestSummmaryButton))
+                                                                                .addGroup(AdminDashboardPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(131, 131, 131)
+                                                                                                .addComponent(AdminDashboardText,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                250,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                Short.MAX_VALUE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                ManagerDashboardPageLayout.createSequentialGroup()
-                                                                                .addContainerGap(
-                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                Short.MAX_VALUE)
-                                                                                .addComponent(ManagerDashboardText,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                250,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addGap(119, 119, 119)));
-                ManagerDashboardPageLayout.setVerticalGroup(
-                                ManagerDashboardPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(ManagerDashboardPageLayout.createSequentialGroup()
-                                                                .addGap(49, 49, 49)
-                                                                .addComponent(ManagerDashboardText,
+                                                                                Short.MAX_VALUE)));
+                AdminDashboardPageLayout.setVerticalGroup(
+                                AdminDashboardPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(AdminDashboardPageLayout.createSequentialGroup()
+                                                                .addGap(46, 46, 46)
+                                                                .addComponent(AdminDashboardText,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 50,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(100, 100, 100)
-                                                                .addGroup(ManagerDashboardPageLayout.createParallelGroup(
+                                                                .addGap(103, 103, 103)
+                                                                .addGroup(AdminDashboardPageLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                .addComponent(GoMainPageManagerButton)
-                                                                                .addComponent(EditListingsManagerButton)
+                                                                                .addComponent(GoMainPageAdminButton)
+                                                                                .addComponent(EditListingsAdminButton)
                                                                                 .addComponent(ChnageFeesButton)
                                                                                 .addComponent(RequestSummmaryButton))
                                                                 .addContainerGap(126, Short.MAX_VALUE)));
@@ -1171,19 +1275,21 @@ public class View extends javax.swing.JFrame {
                         }
                 });
 
-                TableManager.setModel(new javax.swing.table.DefaultTableModel(
+                TableAdmin.setModel(new javax.swing.table.DefaultTableModel(
                                 new Object[][] {
 
                                 },
                                 new String[] {
-                                                "Bedrooms", "Bathrooms", "Property Type", "Furnished", "Price"
+                                                "Bedrooms", "Bathrooms", "Property Type", "Furnished", "Price",
+                                                "Quadrant", "Landlord"
                                 }) {
                         Class[] types = new Class[] {
                                         java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class,
-                                        java.lang.Boolean.class, java.lang.Double.class
+                                        java.lang.Boolean.class, java.lang.Double.class, java.lang.String.class,
+                                        java.lang.String.class
                         };
                         boolean[] canEdit = new boolean[] {
-                                        true, false, false, false, false
+                                        false, false, false, false, false, false, false
                         };
 
                         public Class getColumnClass(int columnIndex) {
@@ -1194,62 +1300,67 @@ public class View extends javax.swing.JFrame {
                                 return canEdit[columnIndex];
                         }
                 });
-                TableManager.setColumnSelectionAllowed(true);
-                ScrollPaneManager.setViewportView(TableManager);
-                TableManager.getColumnModel().getSelectionModel()
+                TableAdmin.setColumnSelectionAllowed(true);
+                ScrollPaneAdmin.setViewportView(TableAdmin);
+                TableAdmin.getColumnModel().getSelectionModel()
                                 .setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-                EditButtonManagerLis.setText("Edit");
-                EditButtonManagerLis.addActionListener(new java.awt.event.ActionListener() {
+                EditButtonAdminLis.setText("Edit");
+                EditButtonAdminLis.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                EditButtonManagerLisActionPerformed(evt);
+                                EditButtonAdminLisActionPerformed(evt);
                         }
                 });
 
-                javax.swing.GroupLayout EditListingPageManagerLayout = new javax.swing.GroupLayout(
-                                EditListingPageManager.getContentPane());
-                EditListingPageManager.getContentPane().setLayout(EditListingPageManagerLayout);
-                EditListingPageManagerLayout.setHorizontalGroup(
-                                EditListingPageManagerLayout
+                javax.swing.GroupLayout EditListingPageAdminLayout = new javax.swing.GroupLayout(
+                                EditListingPageAdmin.getContentPane());
+                EditListingPageAdmin.getContentPane().setLayout(EditListingPageAdminLayout);
+                EditListingPageAdminLayout.setHorizontalGroup(
+                                EditListingPageAdminLayout
                                                 .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                EditListingPageManagerLayout.createSequentialGroup()
-                                                                                .addContainerGap(534, Short.MAX_VALUE)
+                                                                EditListingPageAdminLayout.createSequentialGroup()
+                                                                                .addContainerGap(642, Short.MAX_VALUE)
                                                                                 .addComponent(BackAEditListings,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                 73,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                 .addGap(18, 18, 18))
-                                                .addGroup(EditListingPageManagerLayout.createSequentialGroup()
-                                                                .addGap(41, 41, 41)
-                                                                .addGroup(EditListingPageManagerLayout
-                                                                                .createParallelGroup(
-                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                                .addComponent(EditButtonManagerLis,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                73,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(ScrollPaneManager,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                535,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(EditListingPageAdminLayout.createSequentialGroup()
+                                                                .addGap(503, 503, 503)
+                                                                .addComponent(EditButtonAdminLis,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                73,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                Short.MAX_VALUE)));
-                EditListingPageManagerLayout.setVerticalGroup(
-                                EditListingPageManagerLayout
+                                                                                Short.MAX_VALUE))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                EditListingPageAdminLayout.createSequentialGroup()
+                                                                                .addContainerGap(
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE)
+                                                                                .addComponent(ScrollPaneAdmin,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                678,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addContainerGap(
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE)));
+                EditListingPageAdminLayout.setVerticalGroup(
+                                EditListingPageAdminLayout
                                                 .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(EditListingPageManagerLayout.createSequentialGroup()
+                                                .addGroup(EditListingPageAdminLayout.createSequentialGroup()
                                                                 .addGap(14, 14, 14)
                                                                 .addComponent(BackAEditListings)
                                                                 .addPreferredGap(
                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(ScrollPaneManager,
+                                                                .addComponent(ScrollPaneAdmin,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 280,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(18, 18, 18)
-                                                                .addComponent(EditButtonManagerLis)
-                                                                .addContainerGap(28, Short.MAX_VALUE)));
+                                                                .addComponent(EditButtonAdminLis)
+                                                                .addContainerGap(46, Short.MAX_VALUE)));
 
                 BackSummaryButton.setText("Back");
                 BackSummaryButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1266,7 +1377,7 @@ public class View extends javax.swing.JFrame {
                                 SummaryPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SummaryPageLayout
                                                                 .createSequentialGroup()
-                                                                .addContainerGap(313, Short.MAX_VALUE)
+                                                                .addContainerGap(539, Short.MAX_VALUE)
                                                                 .addComponent(BackSummaryButton,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 73,
@@ -1276,7 +1387,7 @@ public class View extends javax.swing.JFrame {
                                                                 .addGap(72, 72, 72)
                                                                 .addComponent(SummaryText,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                239,
+                                                                                464,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                 Short.MAX_VALUE)));
@@ -1288,14 +1399,14 @@ public class View extends javax.swing.JFrame {
                                                                 .addGap(36, 36, 36)
                                                                 .addComponent(SummaryText,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                150,
+                                                                                273,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addContainerGap(70, Short.MAX_VALUE)));
+                                                                .addContainerGap(65, Short.MAX_VALUE)));
 
-                BackManagerEditProp.setText("Back");
-                BackManagerEditProp.addActionListener(new java.awt.event.ActionListener() {
+                BackAdminEditProp.setText("Back");
+                BackAdminEditProp.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                BackManagerEditPropActionPerformed(evt);
+                                BackAdminEditPropActionPerformed(evt);
                         }
                 });
 
@@ -1329,111 +1440,107 @@ public class View extends javax.swing.JFrame {
                 NumbBathroomstext1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
                 NumbBathroomstext1.setText("Number of bathrooms");
 
-                javax.swing.GroupLayout EditPropertyManagerLayout = new javax.swing.GroupLayout(
-                                EditPropertyManager.getContentPane());
-                EditPropertyManager.getContentPane().setLayout(EditPropertyManagerLayout);
-                EditPropertyManagerLayout.setHorizontalGroup(
-                                EditPropertyManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(EditPropertyManagerLayout.createSequentialGroup()
+                PropTypeNewPropField1.setModel(new javax.swing.DefaultComboBoxModel<>(
+                                new String[] { "Condo", "Townhouse", "Apartment" }));
+
+                javax.swing.GroupLayout EditPropertyAdminLayout = new javax.swing.GroupLayout(
+                                EditPropertyAdmin.getContentPane());
+                EditPropertyAdmin.getContentPane().setLayout(EditPropertyAdminLayout);
+                EditPropertyAdminLayout.setHorizontalGroup(
+                                EditPropertyAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(EditPropertyAdminLayout.createSequentialGroup()
                                                                 .addGap(77, 77, 77)
-                                                                .addGroup(EditPropertyManagerLayout.createParallelGroup(
+                                                                .addGroup(EditPropertyAdminLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addGroup(EditPropertyManagerLayout
+                                                                                .addGroup(EditPropertyAdminLayout
                                                                                                 .createSequentialGroup()
-                                                                                                .addComponent(NumbBathroomstext1)
-                                                                                                .addContainerGap(
+                                                                                                .addComponent(NewPropTitle1,
                                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                Short.MAX_VALUE))
-                                                                                .addGroup(EditPropertyManagerLayout
+                                                                                                                369,
+                                                                                                                Short.MAX_VALUE)
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(BackAdminEditProp))
+                                                                                .addGroup(EditPropertyAdminLayout
                                                                                                 .createSequentialGroup()
-                                                                                                .addGroup(EditPropertyManagerLayout
+                                                                                                .addGroup(EditPropertyAdminLayout
                                                                                                                 .createParallelGroup(
-                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                                                                .addGroup(EditPropertyManagerLayout
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addGroup(EditPropertyAdminLayout
                                                                                                                                 .createSequentialGroup()
-                                                                                                                                .addComponent(FurnishedBox1,
-                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                87,
-                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                .addGap(71, 71, 71))
-                                                                                                                .addGroup(EditPropertyManagerLayout
-                                                                                                                                .createParallelGroup(
-                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                .addComponent(NewPropTitle1,
-                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                                                316,
-                                                                                                                                                Short.MAX_VALUE)
-                                                                                                                                .addGroup(EditPropertyManagerLayout
-                                                                                                                                                .createSequentialGroup()
-                                                                                                                                                .addGroup(EditPropertyManagerLayout
+                                                                                                                                .addGroup(EditPropertyAdminLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                .addComponent(NumbBedText1,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                135,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(QuadrantText1,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                70,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(PropertyTypeNewPropText1,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                103,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(PriceText1,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                41,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(NewPropSubmitButton1,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                97,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                                                .addGap(38, 38, 38)
+                                                                                                                                .addGroup(EditPropertyAdminLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                .addComponent(QuadrantInputBox1,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                64,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(PriceField1,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                72,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addGroup(EditPropertyAdminLayout
                                                                                                                                                                 .createParallelGroup(
+                                                                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                                                                                                false)
+                                                                                                                                                                .addComponent(NumbBathroomField1,
                                                                                                                                                                                 javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                                                .addComponent(NumbBedText1,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                135,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(QuadrantText1,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                70,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(PropertyTypeNewPropText1,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                103,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(PriceText1,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                41,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(NewPropSubmitButton1,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                97,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                                                                                .addGap(38, 38, 38)
-                                                                                                                                                .addGroup(EditPropertyManagerLayout
-                                                                                                                                                                .createParallelGroup(
-                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                                                .addComponent(QuadrantInputBox1,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                64,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(PropTypeNewPropField1,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                72,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addComponent(PriceField1,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                                72,
-                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                                .addGroup(EditPropertyManagerLayout
-                                                                                                                                                                                .createParallelGroup(
-                                                                                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                                                                                                                                                false)
-                                                                                                                                                                                .addComponent(NumbBathroomField1,
-                                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                                                                .addComponent(NumbBedSpinner1,
-                                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                                                                                                57,
-                                                                                                                                                                                                Short.MAX_VALUE))))))
-                                                                                                .addGap(25, 25, 25)
-                                                                                                .addComponent(BackManagerEditProp)
-                                                                                                .addGap(18, 18, 18)))));
-                EditPropertyManagerLayout.setVerticalGroup(
-                                EditPropertyManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(EditPropertyManagerLayout.createSequentialGroup()
+                                                                                                                                                                .addComponent(NumbBedSpinner1,
+                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                                                57,
+                                                                                                                                                                                Short.MAX_VALUE))
+                                                                                                                                                .addComponent(PropTypeNewPropField1,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                101,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                                                .addComponent(NumbBathroomstext1)
+                                                                                                                .addComponent(FurnishedBox1,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                87,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                                                .addContainerGap()));
+                EditPropertyAdminLayout.setVerticalGroup(
+                                EditPropertyAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(EditPropertyAdminLayout.createSequentialGroup()
                                                                 .addGap(17, 17, 17)
-                                                                .addGroup(EditPropertyManagerLayout.createParallelGroup(
+                                                                .addGroup(EditPropertyAdminLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addComponent(BackManagerEditProp)
+                                                                                .addComponent(BackAdminEditProp)
                                                                                 .addComponent(NewPropTitle1))
                                                                 .addGap(48, 48, 48)
-                                                                .addGroup(EditPropertyManagerLayout.createParallelGroup(
+                                                                .addGroup(EditPropertyAdminLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.LEADING)
                                                                                 .addComponent(NumbBathroomField1,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addGroup(EditPropertyManagerLayout
+                                                                                .addGroup(EditPropertyAdminLayout
                                                                                                 .createSequentialGroup()
                                                                                                 .addGap(2, 2, 2)
                                                                                                 .addComponent(NumbBathroomstext1,
@@ -1442,7 +1549,7 @@ public class View extends javax.swing.JFrame {
                                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                                 .addPreferredGap(
                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addGroup(EditPropertyManagerLayout.createParallelGroup(
+                                                                .addGroup(EditPropertyAdminLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.BASELINE)
                                                                                 .addComponent(NumbBedText1,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
@@ -1453,7 +1560,7 @@ public class View extends javax.swing.JFrame {
                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                 .addGap(18, 18, 18)
-                                                                .addGroup(EditPropertyManagerLayout.createParallelGroup(
+                                                                .addGroup(EditPropertyAdminLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.BASELINE)
                                                                                 .addComponent(QuadrantText1)
                                                                                 .addComponent(QuadrantInputBox1,
@@ -1461,16 +1568,16 @@ public class View extends javax.swing.JFrame {
                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                 .addGap(18, 18, 18)
-                                                                .addGroup(EditPropertyManagerLayout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                .addGroup(EditPropertyAdminLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
                                                                                 .addComponent(PropertyTypeNewPropText1)
                                                                                 .addComponent(PropTypeNewPropField1,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                 .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addGroup(EditPropertyManagerLayout.createParallelGroup(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(EditPropertyAdminLayout.createParallelGroup(
                                                                                 javax.swing.GroupLayout.Alignment.LEADING)
                                                                                 .addComponent(PriceText1)
                                                                                 .addComponent(PriceField1,
@@ -1481,7 +1588,437 @@ public class View extends javax.swing.JFrame {
                                                                 .addComponent(FurnishedBox1)
                                                                 .addGap(41, 41, 41)
                                                                 .addComponent(NewPropSubmitButton1)
-                                                                .addContainerGap(52, Short.MAX_VALUE)));
+                                                                .addContainerGap(60, Short.MAX_VALUE)));
+
+                BackLAddProp1.setText("Back");
+                BackLAddProp1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                BackLAddProp1ActionPerformed(evt);
+                        }
+                });
+
+                NewPropTitle2.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+                NewPropTitle2.setText("Search");
+
+                NumbBedTextSearch.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+                NumbBedTextSearch.setText("Number of bedrooms");
+
+                FurnishedBox2.setText("Furnished");
+                FurnishedBox2.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                FurnishedBox2ActionPerformed(evt);
+                        }
+                });
+
+                QuadrantText2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+                QuadrantText2.setText("Quadrant");
+
+                QuadrantInputBox2.setModel(
+                                new javax.swing.DefaultComboBoxModel<>(new String[] { "NW", "SW", "NE", "SE" }));
+                QuadrantInputBox2.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                QuadrantInputBox2ActionPerformed(evt);
+                        }
+                });
+
+                PropertyTypeNewPropText2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+                PropertyTypeNewPropText2.setText("Property type");
+
+                PriceText2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+                PriceText2.setText("Price");
+
+                SearchButtonSubmit.setText("Search");
+                SearchButtonSubmit.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchButtonSubmitActionPerformed(evt);
+                        }
+                });
+
+                NumbBathTextSearch.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+                NumbBathTextSearch.setText("Number of bathrooms");
+
+                SearchNumbBath.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchNumbBathActionPerformed(evt);
+                        }
+                });
+
+                SearchNumbBed.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchNumbBedActionPerformed(evt);
+                        }
+                });
+
+                SearchPrice.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchPriceActionPerformed(evt);
+                        }
+                });
+
+                SearchQuad.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchQuadActionPerformed(evt);
+                        }
+                });
+
+                SearchPropType.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchPropTypeActionPerformed(evt);
+                        }
+                });
+
+                SearchFurn.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchFurnActionPerformed(evt);
+                        }
+                });
+
+                PropTypeNewPropField2.setModel(new javax.swing.DefaultComboBoxModel<>(
+                                new String[] { "Condo", "Townhouse", "Apartment" }));
+
+                javax.swing.GroupLayout SearchPageLayout = new javax.swing.GroupLayout(SearchPage.getContentPane());
+                SearchPage.getContentPane().setLayout(SearchPageLayout);
+                SearchPageLayout.setHorizontalGroup(
+                                SearchPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(SearchPageLayout.createSequentialGroup()
+                                                                .addGroup(SearchPageLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(SearchPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(75, 75, 75)
+                                                                                                .addGroup(SearchPageLayout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addComponent(SearchPrice,
+                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                                                .addComponent(SearchQuad,
+                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                                                .addComponent(SearchPropType,
+                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                                                .addComponent(SearchNumbBed,
+                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                                                .addComponent(SearchFurn,
+                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)))
+                                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                SearchPageLayout.createSequentialGroup()
+                                                                                                                .addContainerGap()
+                                                                                                                .addComponent(SearchNumbBath)))
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(SearchPageLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(SearchPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addComponent(NumbBathTextSearch)
+                                                                                                .addContainerGap(
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                Short.MAX_VALUE))
+                                                                                .addGroup(SearchPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGroup(SearchPageLayout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                                                                                                .addComponent(FurnishedBox2,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                87,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                .addGap(96, 96, 96))
+                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                .addComponent(NumbBedTextSearch,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                135,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(PropertyTypeNewPropText2,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                103,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(SearchButtonSubmit,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                97,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(QuadrantText2,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                70,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                                .createSequentialGroup()
+                                                                                                                                                                .addGap(10, 10, 10)
+                                                                                                                                                                .addComponent(PriceText2,
+                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                                41,
+                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                                                                .addGap(38, 38, 38)
+                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                .addComponent(PriceField2,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                72,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                                                                                                false)
+                                                                                                                                                                .addComponent(NumbBathroomField2,
+                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                                .addComponent(NumbBedSpinner2,
+                                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                                                57,
+                                                                                                                                                                                Short.MAX_VALUE))
+                                                                                                                                                .addComponent(QuadrantInputBox2,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                64,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addComponent(PropTypeNewPropField2,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                101,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                                                .addPreferredGap(
+                                                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                                                                                                45,
+                                                                                                                                                Short.MAX_VALUE))
+                                                                                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                                SearchPageLayout.createSequentialGroup()
+                                                                                                                                                .addGap(62, 62, 62)
+                                                                                                                                                .addComponent(NewPropTitle2,
+                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                                Short.MAX_VALUE)
+                                                                                                                                                .addPreferredGap(
+                                                                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                                                                                .addComponent(BackLAddProp1)
+                                                                                                .addGap(18, 18, 18)))));
+                SearchPageLayout.setVerticalGroup(
+                                SearchPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(SearchPageLayout.createSequentialGroup()
+                                                                .addGroup(SearchPageLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(SearchPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(17, 17, 17)
+                                                                                                .addComponent(BackLAddProp1))
+                                                                                .addGroup(SearchPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(32, 32, 32)
+                                                                                                .addComponent(NewPropTitle2)))
+                                                                .addGap(33, 33, 33)
+                                                                .addGroup(SearchPageLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                .addGroup(SearchPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGroup(SearchPageLayout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addComponent(NumbBathroomField2,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addGap(6, 6, 6)
+                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                                                                                .addComponent(SearchNumbBath)
+                                                                                                                                                .addComponent(NumbBathTextSearch,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                20,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                                                .addGroup(SearchPageLayout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addComponent(NumbBedSpinner2,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                .addComponent(NumbBedTextSearch,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                28,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                .addComponent(SearchNumbBed))
+                                                                .addGroup(SearchPageLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                .addGroup(SearchPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGroup(SearchPageLayout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addGap(27, 27, 27)
+                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                                                                                .addComponent(QuadrantText2)
+                                                                                                                                                .addComponent(QuadrantInputBox2,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                                .createSequentialGroup()
+                                                                                                                                                                .addGap(32, 32, 32)
+                                                                                                                                                                .addComponent(SearchPropType))
+                                                                                                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                                                                                SearchPageLayout.createSequentialGroup()
+                                                                                                                                                                                .addPreferredGap(
+                                                                                                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                                                                                                                                .addComponent(PropertyTypeNewPropText2)
+                                                                                                                                                                                                .addComponent(PropTypeNewPropField2,
+                                                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                                                                                                .addGap(18, 18, 18)
+                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                                                .addComponent(PriceField2,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                                                .createParallelGroup(
+                                                                                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                                                                                                .addComponent(PriceText2)
+                                                                                                                                                                .addComponent(SearchPrice))))
+                                                                                                                .addGroup(SearchPageLayout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addGap(31, 31, 31)
+                                                                                                                                .addComponent(SearchQuad)))
+                                                                                                .addGap(48, 48, 48)
+                                                                                                .addComponent(FurnishedBox2))
+                                                                                .addGroup(SearchPageLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(SearchFurn)))
+                                                                .addGap(41, 41, 41)
+                                                                .addComponent(SearchButtonSubmit)
+                                                                .addContainerGap(56, Short.MAX_VALUE)));
+
+                PropietyTitle1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+                PropietyTitle1.setText("Properties");
+
+                TableMain2.setModel(new javax.swing.table.DefaultTableModel(
+                                new Object[][] {
+
+                                },
+                                new String[] {
+                                                "Bedrooms", "Bathrooms", "Property Type", "Furnished", "Price",
+                                                "Quadrant"
+                                }) {
+                        Class[] types = new Class[] {
+                                        java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class,
+                                        java.lang.Boolean.class, java.lang.Double.class, java.lang.String.class
+                        };
+                        boolean[] canEdit = new boolean[] {
+                                        false, false, false, false, false, false
+                        };
+
+                        public Class getColumnClass(int columnIndex) {
+                                return types[columnIndex];
+                        }
+
+                        public boolean isCellEditable(int rowIndex, int columnIndex) {
+                                return canEdit[columnIndex];
+                        }
+                });
+                ScrollPaneMain2.setViewportView(TableMain2);
+                TableMain2.getColumnModel().getSelectionModel()
+                                .setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
+                SearchButton1.setText("Search");
+                SearchButton1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                SearchButton1ActionPerformed(evt);
+                        }
+                });
+
+                jButton2.setText("Back");
+                jButton2.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton2ActionPerformed(evt);
+                        }
+                });
+
+                javax.swing.GroupLayout MainPageManagerLayout = new javax.swing.GroupLayout(
+                                MainPageManager.getContentPane());
+                MainPageManager.getContentPane().setLayout(MainPageManagerLayout);
+                MainPageManagerLayout.setHorizontalGroup(
+                                MainPageManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(MainPageManagerLayout.createSequentialGroup()
+                                                                .addGap(41, 41, 41)
+                                                                .addComponent(PropietyTitle1,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                156,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                Short.MAX_VALUE)
+                                                                .addComponent(jButton2,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                73,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18))
+                                                .addGroup(MainPageManagerLayout.createSequentialGroup()
+                                                                .addGroup(MainPageManagerLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(MainPageManagerLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(57, 57, 57)
+                                                                                                .addComponent(SearchButton1,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                105,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                .addGroup(MainPageManagerLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(27, 27, 27)
+                                                                                                .addComponent(ScrollPaneMain2,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                613,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                .addContainerGap(49, Short.MAX_VALUE)));
+                MainPageManagerLayout.setVerticalGroup(
+                                MainPageManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(MainPageManagerLayout.createSequentialGroup()
+                                                                .addGroup(MainPageManagerLayout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(MainPageManagerLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(40, 40, 40)
+                                                                                                .addComponent(PropietyTitle1,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                37,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                .addGroup(MainPageManagerLayout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGap(30, 30, 30)
+                                                                                                .addComponent(jButton2)))
+                                                                .addGap(18, 18, Short.MAX_VALUE)
+                                                                .addComponent(ScrollPaneMain2,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                348,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(SearchButton1)
+                                                                .addGap(68, 68, 68)));
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1616,14 +2153,14 @@ public class View extends javax.swing.JFrame {
                 EditListingPageLandlord.pack();
         }
 
-        private void GoMainPageManagerButtonActionPerformed(java.awt.event.ActionEvent evt) {
-                GoAMain();
+        private void GoMainPageAdminButtonActionPerformed(java.awt.event.ActionEvent evt) {
+                GoADMain();
         }
 
-        private void EditListingsManagerButtonActionPerformed(java.awt.event.ActionEvent evt) {
-                ManagerDashboardPage.setVisible(false);
-                EditListingPageManager.setVisible(true);
-                EditListingPageManager.pack();
+        private void EditListingsAdminButtonActionPerformed(java.awt.event.ActionEvent evt) {
+                AdminDashboardPage.setVisible(false);
+                EditListingPageAdmin.setVisible(true);
+                EditListingPageAdmin.pack();
         }
 
         private void BackFeesActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1643,17 +2180,17 @@ public class View extends javax.swing.JFrame {
         }
 
         private void BackAEditListingsActionPerformed(java.awt.event.ActionEvent evt) {
-                GoBackADash(EditListingPageManager);
+                GoBackADash(EditListingPageAdmin);
         }
 
         private void ChnageFeesButtonActionPerformed(java.awt.event.ActionEvent evt) {
-                ManagerDashboardPage.setVisible(false);
+                AdminDashboardPage.setVisible(false);
                 ChangeFeesPage.setVisible(true);
                 ChangeFeesPage.pack();
         }
 
         private void RequestSummmaryButtonActionPerformed(java.awt.event.ActionEvent evt) {
-                ManagerDashboardPage.setVisible(false);
+                AdminDashboardPage.setVisible(false);
                 SummaryPage.setVisible(true);
                 SummaryPage.pack();
         }
@@ -1662,7 +2199,7 @@ public class View extends javax.swing.JFrame {
                 GoBackADash(SummaryPage);
         }
 
-        private void ViewMainButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        private void MainEmailButtonActionPerformed(java.awt.event.ActionEvent evt) {
 
         }
 
@@ -1685,18 +2222,18 @@ public class View extends javax.swing.JFrame {
                 // BalanceFieldText should be set to the balance remaining
         }
 
-        private void BackManagerEditPropActionPerformed(java.awt.event.ActionEvent evt) {
-                GoBackADash(EditPropertyManager);
+        private void BackAdminEditPropActionPerformed(java.awt.event.ActionEvent evt) {
+                GoBackADash(EditPropertyAdmin);
         }
 
         private void FurnishedBox1ActionPerformed(java.awt.event.ActionEvent evt) {
                 // TODO add your handling code here:
         }
 
-        private void EditButtonManagerLisActionPerformed(java.awt.event.ActionEvent evt) {
-                EditListingPageManager.setVisible(false);
-                EditPropertyManager.setVisible(true);
-                EditPropertyManager.pack();
+        private void EditButtonAdminLisActionPerformed(java.awt.event.ActionEvent evt) {
+                EditListingPageAdmin.setVisible(false);
+                EditPropertyAdmin.setVisible(true);
+                EditPropertyAdmin.pack();
         }
 
         private void LoginBackActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1706,9 +2243,84 @@ public class View extends javax.swing.JFrame {
         }
 
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-                RegisterPage.setVisible(true);
+                RegisterPage.setVisible(false);
                 this.setVisible(true);
                 this.pack();
+        }
+
+        private void EditLandlordListingButtonActionPerformed(java.awt.event.ActionEvent evt) {
+                EditListingPageLandlord.setVisible(false);
+                EditPropertyAdmin.setVisible(true);
+                EditPropertyAdmin.pack();
+        }
+
+        private void NewPropSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {
+
+        }
+
+        private void BackLAddProp1ActionPerformed(java.awt.event.ActionEvent evt) {
+                if (usertype.equals("Manager")) {
+                        SearchPage.setVisible(false);
+                        MainPageManager.setVisible(true);
+                        MainPageManager.pack();
+                } else {
+                        SearchPage.setVisible(false);
+                        MainPage.setVisible(true);
+                        MainPage.pack();
+                }
+
+        }
+
+        private void FurnishedBox2ActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void SearchButtonSubmitActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void SearchNumbBathActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void SearchNumbBedActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void SearchPriceActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void SearchQuadActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void SearchPropTypeActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void QuadrantInputBox2ActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void SearchFurnActionPerformed(java.awt.event.ActionEvent evt) {
+                // TODO add your handling code here:
+        }
+
+        private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+                GoBackADash(MainPageManager);
+        }
+
+        private void SearchButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+                MainPageManager.setVisible(false);
+                SearchPage.setVisible(true);
+                SearchPage.pack();
+        }
+
+        private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {
+                MainPage.setVisible(false);
+                SearchPage.setVisible(true);
+                SearchPage.pack();
         }
 
         private void GoLogin() {
@@ -1719,8 +2331,8 @@ public class View extends javax.swing.JFrame {
 
         private void GoBackADash(javax.swing.JFrame page) {
                 page.setVisible(false);
-                ManagerDashboardPage.pack();
-                ManagerDashboardPage.setVisible(true);
+                AdminDashboardPage.pack();
+                AdminDashboardPage.setVisible(true);
         }
 
         private void GoBackLDash(javax.swing.JFrame page) {
@@ -1741,9 +2353,9 @@ public class View extends javax.swing.JFrame {
                 if (usertype.equals("Landlord")) {
                         LandlordDashboardPage.pack();
                         LandlordDashboardPage.setVisible(true);
-                } else if (usertype.equals("Manager")) {
-                        ManagerDashboardPage.pack();
-                        ManagerDashboardPage.setVisible(true);
+                } else if (usertype.equals("Admin")) {
+                        AdminDashboardPage.pack();
+                        AdminDashboardPage.setVisible(true);
                 } else {
                         MainPage.pack();
                         MainPage.setVisible(true);
@@ -1751,15 +2363,15 @@ public class View extends javax.swing.JFrame {
 
         }
 
-        public void GoRMain() {
+        private void GoRMain() {
                 RegisterPage.setVisible(false);
 
                 if (usertype.equals("Landlord")) {
                         LandlordDashboardPage.pack();
                         LandlordDashboardPage.setVisible(true);
                 } else if (usertype.equals("Manager")) {
-                        ManagerDashboardPage.pack();
-                        ManagerDashboardPage.setVisible(true);
+                        AdminDashboardPage.pack();
+                        AdminDashboardPage.setVisible(true);
                 } else {
                         MainPage.pack();
                         MainPage.setVisible(true);
@@ -1767,10 +2379,18 @@ public class View extends javax.swing.JFrame {
         }
 
         private void GoAMain() {
-                ManagerDashboardPage.setVisible(false);
+                AdminDashboardPage.setVisible(false);
 
                 MainPage.pack();
                 MainPage.setVisible(true);
+
+        }
+
+        private void GoADMain() {
+                AdminDashboardPage.setVisible(false);
+
+                MainPageManager.pack();
+                MainPageManager.setVisible(true);
 
         }
 
@@ -1779,9 +2399,9 @@ public class View extends javax.swing.JFrame {
                 model.addRow(data);
         }
 
-        public void setRecordsManager(Object[] data) {
-                model = (DefaultTableModel) TableManager.getModel();
-                model.addRow(data);
+        public void setRecordsAdmin(Object[] data) {
+                model = (DefaultTableModel) TableAdmin.getModel();
+                model.addRow(data2);
         }
 
         public void setRecordsLandlord(Object[] data) {
@@ -1791,7 +2411,7 @@ public class View extends javax.swing.JFrame {
 
         private void LoginCheck() {
                 boolean status = false;
-                String Utemp = "Manager";
+                String Utemp = "admin";
                 String Ptemp = "password";
 
                 System.out.println("Username Field: " + UsernameField.getText());
@@ -1862,12 +2482,13 @@ public class View extends javax.swing.JFrame {
         // Variables declaration - do not modify
         private javax.swing.JLabel AccountRegisterType;
         private javax.swing.JFrame AddPropertyPage;
-        private javax.swing.JFrame ManagerDashboardPage;
-        private javax.swing.JLabel ManagerDashboardText;
+        private javax.swing.JFrame AdminDashboardPage;
+        private javax.swing.JLabel AdminDashboardText;
         private javax.swing.JButton BackAEditListings;
-        private javax.swing.JButton BackManagerEditProp;
+        private javax.swing.JButton BackAdminEditProp;
         private javax.swing.JButton BackFees;
         private javax.swing.JButton BackLAddProp;
+        private javax.swing.JButton BackLAddProp1;
         private javax.swing.JButton BackLEditListing;
         private javax.swing.JButton BackLPayFees;
         private javax.swing.JButton BackSummaryButton;
@@ -1881,20 +2502,23 @@ public class View extends javax.swing.JFrame {
         private javax.swing.JButton DepositButton;
         private javax.swing.JTextField DepositField;
         private javax.swing.JLabel DepositText;
-        private javax.swing.JButton EditButtonManagerLis;
-        private javax.swing.JFrame EditListingPageManager;
+        private javax.swing.JButton EditButtonAdminLis;
+        private javax.swing.JButton EditLandlordListingButton;
+        private javax.swing.JFrame EditListingPageAdmin;
         private javax.swing.JFrame EditListingPageLandlord;
-        private javax.swing.JButton EditListingsManagerButton;
+        private javax.swing.JButton EditListingsAdminButton;
         private javax.swing.JButton EditListingsLandlord;
-        private javax.swing.JFrame EditPropertyManager;
+        private javax.swing.JFrame EditPropertyAdmin;
+        private javax.swing.JLabel EditYourListings;
         private javax.swing.JTextField EmailRegisterField;
         private javax.swing.JLabel EmailRegisterText;
         private javax.swing.JToggleButton EnterHomeButton;
-        private javax.swing.JTextField FeesManagerField;
-        private javax.swing.JLabel FeesManagerText;
+        private javax.swing.JTextField FeesAdminField;
+        private javax.swing.JLabel FeesAdminText;
         private javax.swing.JCheckBox FurnishedBox;
         private javax.swing.JCheckBox FurnishedBox1;
-        private javax.swing.JButton GoMainPageManagerButton;
+        private javax.swing.JCheckBox FurnishedBox2;
+        private javax.swing.JButton GoMainPageAdminButton;
         private javax.swing.JFrame LandlordDashboardPage;
         private javax.swing.JLabel LandlordDashboardTitle;
         private javax.swing.JButton LoginBack;
@@ -1902,19 +2526,26 @@ public class View extends javax.swing.JFrame {
         private javax.swing.JToggleButton LoginHomeButton;
         private javax.swing.JFrame LoginPage;
         private javax.swing.JLabel LoginText;
+        private javax.swing.JButton MainEmailButton;
         private javax.swing.JFrame MainPage;
+        private javax.swing.JFrame MainPageManager;
         private javax.swing.JButton NewPropSubmitButton;
         private javax.swing.JButton NewPropSubmitButton1;
         private javax.swing.JLabel NewPropTitle;
         private javax.swing.JLabel NewPropTitle1;
+        private javax.swing.JLabel NewPropTitle2;
+        private javax.swing.JLabel NumbBathTextSearch;
         private javax.swing.JSpinner NumbBathroomField;
         private javax.swing.JSpinner NumbBathroomField1;
+        private javax.swing.JSpinner NumbBathroomField2;
         private javax.swing.JLabel NumbBathroomstext;
         private javax.swing.JLabel NumbBathroomstext1;
         private javax.swing.JSpinner NumbBedSpinner;
         private javax.swing.JSpinner NumbBedSpinner1;
+        private javax.swing.JSpinner NumbBedSpinner2;
         private javax.swing.JLabel NumbBedText;
         private javax.swing.JLabel NumbBedText1;
+        private javax.swing.JLabel NumbBedTextSearch;
         private javax.swing.JPasswordField PasswordField;
         private javax.swing.JPasswordField PasswordRegisterField;
         private javax.swing.JLabel PasswordRegisterText;
@@ -1925,17 +2556,24 @@ public class View extends javax.swing.JFrame {
         private javax.swing.JLabel PeriodText;
         private javax.swing.JTextField PriceField;
         private javax.swing.JTextField PriceField1;
+        private javax.swing.JTextField PriceField2;
         private javax.swing.JLabel PriceText;
         private javax.swing.JLabel PriceText1;
-        private javax.swing.JTextField PropTypeNewPropField;
-        private javax.swing.JTextField PropTypeNewPropField1;
+        private javax.swing.JLabel PriceText2;
+        private javax.swing.JComboBox<String> PropTypeNewPropField;
+        private javax.swing.JComboBox<String> PropTypeNewPropField1;
+        private javax.swing.JComboBox<String> PropTypeNewPropField2;
         private javax.swing.JLabel PropertyTypeNewPropText;
         private javax.swing.JLabel PropertyTypeNewPropText1;
+        private javax.swing.JLabel PropertyTypeNewPropText2;
         private javax.swing.JLabel PropietyTitle;
+        private javax.swing.JLabel PropietyTitle1;
         private javax.swing.JComboBox<String> QuadrantInputBox;
         private javax.swing.JComboBox<String> QuadrantInputBox1;
+        private javax.swing.JComboBox<String> QuadrantInputBox2;
         private javax.swing.JLabel QuadrantText;
         private javax.swing.JLabel QuadrantText1;
+        private javax.swing.JLabel QuadrantText2;
         private javax.swing.JToggleButton RegisterHomeButton;
         private javax.swing.JButton RegisterNewUserButton;
         private javax.swing.JFrame RegisterPage;
@@ -1945,19 +2583,31 @@ public class View extends javax.swing.JFrame {
         private javax.swing.JButton ResetButton;
         private javax.swing.JButton ResetRegisterButton;
         private javax.swing.JLabel ResultText;
-        private javax.swing.JScrollPane ScrollPaneManager;
+        private javax.swing.JScrollPane ScrollPaneAdmin;
         private javax.swing.JScrollPane ScrollPaneMain;
         private javax.swing.JScrollPane ScrollPaneMain1;
+        private javax.swing.JScrollPane ScrollPaneMain2;
+        private javax.swing.JButton SearchButton;
+        private javax.swing.JButton SearchButton1;
+        private javax.swing.JButton SearchButtonSubmit;
+        private javax.swing.JRadioButton SearchFurn;
+        private javax.swing.JRadioButton SearchNumbBath;
+        private javax.swing.JRadioButton SearchNumbBed;
+        private javax.swing.JFrame SearchPage;
+        private javax.swing.JRadioButton SearchPrice;
+        private javax.swing.JRadioButton SearchPropType;
+        private javax.swing.JRadioButton SearchQuad;
         private javax.swing.JFrame SummaryPage;
         private javax.swing.JLabel SummaryText;
-        private javax.swing.JTable TableManager;
+        private javax.swing.JTable TableAdmin;
         private javax.swing.JTable TableMain;
         private javax.swing.JTable TableMain1;
+        private javax.swing.JTable TableMain2;
         private javax.swing.JTextField UsernameField;
         private javax.swing.JLabel UsernameText;
-        private javax.swing.JButton ViewMainButton;
         private javax.swing.JLabel WelcomeText;
         private javax.swing.JButton jButton1;
+        private javax.swing.JButton jButton2;
         // End of variables declaration
 
         // FOR REGISTRATION
@@ -2004,11 +2654,9 @@ public class View extends javax.swing.JFrame {
                 usertype = type;
                 ResultText.setText("Login Successful");
                 ResultText.setForeground(Color.BLUE);
-                // dispose();
                 LoginPage.setVisible(false);
                 RegisterPage.setVisible(false);
-                MainPage.pack();
-                MainPage.setVisible(true);
+                GoRMain();
         }
 
         public void failedLogin() {
