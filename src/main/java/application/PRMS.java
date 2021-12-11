@@ -9,12 +9,10 @@ public class PRMS {
 
         DatabaseModel model = new DatabaseModel();
 
-        EventQueue.invokeLater(() -> {
-            View view = new View();
+        View view = new View();
 
-            Controller controller = new Controller(model, view);
+        Controller controller = new Controller(model, view);
 
-            view.setVisible(true);
-        });
+        view.setVisible(true);
     }
 }
