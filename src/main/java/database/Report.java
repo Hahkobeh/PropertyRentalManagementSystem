@@ -25,7 +25,7 @@ public class Report {
             totalNumberofRentedHouses++;
             cur.next();
         }
-        theReport.append("The total number of rented houses is: " + totalNumberofRentedHouses + "\n");
+        theReport.append("The total number of inactive houses is: " + totalNumberofRentedHouses + "\n");
 
         cur = propertiesCollection.find(eq("STATUS",1)).iterator();
         int totalNumberofActiveHouses =  0;

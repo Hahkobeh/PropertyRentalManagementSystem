@@ -2,12 +2,14 @@ package database;
 
 import com.mongodb.MongoException;
 import com.mongodb.client.*;
+import com.mongodb.client.model.Updates;
 import org.bson.Document;
 
 import static com.mongodb.client.model.Filters.eq;
 
 
 import database.users.*;
+import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
@@ -25,6 +27,8 @@ public class DatabaseModel {
     private MongoCollection<Document> emailCollection;
     private MongoCollection<Document> paymentDetails;
     PaymentControl pc;
+
+
 
 
     public DatabaseModel(){
@@ -47,22 +51,6 @@ public class DatabaseModel {
             userCollection = database.getCollection("users");
             paymentDetails = database.getCollection("paymentdetails");
             emailCollection = database.getCollection("emails");
-
-
-
-            //addProperty("NW",2,4,false,"condo",20000);
-            //addProperty("SE",2,4,false,"condo",20000);
-
-
-            //addUser(1,"jacob@gmail.com","password12");
-
-            //addUser(2,"jeffery@gmail.com","pass12");
-            //addUser(3,"stuart@gmail.com","managerpass");
-
-
-
-
-
             pc = new PaymentControl(propertiesCollection,paymentDetails);
 
 
@@ -71,6 +59,17 @@ public class DatabaseModel {
         }
 
 
+    }
+
+    public void payForProps(String ll){
+        Bson temp = Updates.set("PAYEDFOR", true);
+        Bson temp2 = Updates.set("STATUS", 1);
+        propertiesCollection.updateMany(eq("LANDLORD",ll), temp);
+        propertiesCollection.updateMany(eq("LANDLORD",ll), temp2);
+    }
+
+    public User getUser() {
+        return user;
     }
 
     public String getAccountType(){
@@ -108,18 +107,21 @@ public class DatabaseModel {
         }
     }
 
-    void addProperty(String quadrant, int numBedrooms, int numBathrooms, boolean furnished, String propertyType, double price) {
+    public void addProperty(String quadrant, int numBedrooms, int numBathrooms, boolean furnished, String propertyType, double price) {
         if(!hasAccess(2)){
             System.err.println("WRONG ACCESS TO ADD PROPERTY");
             System.exit(-1);
         }
         RegisteredUser temp = (RegisteredUser) user;
 
-        propertiesCollection.insertOne(convertProperty(new Property(new ObjectId(),quadrant, temp.getEmail(), numBedrooms, numBathrooms, furnished, propertyType, price)));
+        Property proptemp = new Property(new ObjectId(), temp.getEmail(),quadrant, numBedrooms, numBathrooms, furnished, propertyType, price);
+        Landlord lluser = (Landlord) user;
+        lluser.addProp(proptemp);
+        propertiesCollection.insertOne(convertProperty(proptemp));
     }
 
     public static Document convertProperty(Property prop){
-        return new Document("_id", new ObjectId()).append("STATUS", prop.getStatus()).append("LANDLORD",prop.getLandlord()).append("QUADRANT",prop.getQuadrant()).append("PAYEDFOR", prop.isPayedFor()).append("OUTSTANDINGFEE", prop.getOutstandingFee()).append("NUMBEDROOMS", prop.getNumBedrooms()).append("NUMBATHROOMS", prop.getNumBathrooms()).append("FURNISHED",prop.isFurnished()).append("PROPERTYTPYE", prop.getPropertyType()).append("PRICE", prop.getPrice());
+        return new Document("_id", new ObjectId()).append("STATUS", prop.getStatus()).append("LANDLORD",prop.getLandlord()).append("QUADRANT",prop.getQuadrant()).append("PAYEDFOR", prop.isPayedFor()).append("OUTSTANDINGFEE", prop.getOutstandingFee()).append("NUMBEDROOMS", prop.getNumBedrooms()).append("NUMBATHROOMS", prop.getNumBathrooms()).append("FURNISHED",prop.isFurnished()).append("PROPERTYTYPE", prop.getPropertyType()).append("PRICE", prop.getPrice());
 
     }
 
@@ -140,6 +142,7 @@ public class DatabaseModel {
                 }
                 case 2: {
                     MongoCursor<Document> cursor = propertiesCollection.find(eq("LANDLORD",(String) user.get("EMAIL"))).iterator();
+
                     ArrayList<Property> props = new ArrayList<>();
                     while(cursor.hasNext()) {
                         props.add(new Property(cursor.next()));
@@ -165,6 +168,14 @@ public class DatabaseModel {
 
     public void unregistedLogin(){
         user = new RegularRenter();
+    }
+    public ArrayList<Property> getAll(){
+        ArrayList<Property> props = new ArrayList<>();
+        MongoCursor<Document> cursor = propertiesCollection.find().iterator();
+        while(cursor.hasNext()){
+            props.add(new Property(cursor.next()));
+        }
+        return props;
     }
 
     public ArrayList<Property> search(Document criteria){
