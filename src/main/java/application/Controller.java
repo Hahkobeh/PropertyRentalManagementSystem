@@ -23,6 +23,7 @@ public class Controller {
         view.getRegisterNewUserButton().addActionListener(new RegisterButton());
         view.getLoginButton().addActionListener(new LoginButton());
         view.getTheReportButton().addActionListener( new GetReportButton());
+        view.getChangefeesbutton().addActionListener( new changeFeeButton());
 
         //view.getSearchButton().addActionListener(new SearchButton());
 
@@ -33,6 +34,17 @@ public class Controller {
     //pay the fee for a house
 
     //admin edit fee / period
+    public class changeFeeButton implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            if(view.getManagerFee() != 0){
+                model.getPc().editFee(view.getManagerFee());
+            }
+            if(view.getPeriod() != 0){
+                model.getPc().editFee(view.getPeriod());
+            }
+            view.feePeriodChanged();
+        }
+    }
 
     public class GetReportButton implements ActionListener{
         public void actionPerformed(ActionEvent e) {

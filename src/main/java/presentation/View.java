@@ -97,6 +97,7 @@ public class View extends javax.swing.JFrame {
                 ComboRegisterBox = new javax.swing.JComboBox<>();
                 AccountRegisterType = new javax.swing.JLabel();
                 PasswordRegisterField = new javax.swing.JPasswordField();
+                ChnageFeesButton = new JButton();
                 jButton1 = new javax.swing.JButton();
                 ChangeFeesPage = new javax.swing.JFrame();
                 BackFees = new javax.swing.JButton();
@@ -110,7 +111,6 @@ public class View extends javax.swing.JFrame {
                 ManagerDashboardText = new javax.swing.JLabel();
                 GoMainPageManagerButton = new javax.swing.JButton();
                 EditListingsManagerButton = new javax.swing.JButton();
-                ChnageFeesButton = new javax.swing.JButton();
                 RequestSummmaryButton = new javax.swing.JButton();
                 LandlordDashboardPage = new javax.swing.JFrame();
                 LandlordDashboardTitle = new javax.swing.JLabel();
@@ -784,11 +784,6 @@ public class View extends javax.swing.JFrame {
                 ChangeFeesTitle.setText("Change Fees & Period");
 
                 Changefeesbutton.setText("Change");
-                Changefeesbutton.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                ChangefeesbuttonActionPerformed(evt);
-                        }
-                });
 
                 PeriodText.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
                 PeriodText.setText("Period");
@@ -896,13 +891,14 @@ public class View extends javax.swing.JFrame {
                                 EditListingsManagerButtonActionPerformed(evt);
                         }
                 });
-
                 ChnageFeesButton.setText("Change Fees");
                 ChnageFeesButton.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 ChnageFeesButtonActionPerformed(evt);
                         }
                 });
+
+
 
                 RequestSummmaryButton.setText("Request Summary");
                 RequestSummmaryButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1971,6 +1967,7 @@ public class View extends javax.swing.JFrame {
                 return 0;
         }
 
+
         // FOR LOGGGING IN
 
         public String getPasswordField() {
@@ -2010,6 +2007,36 @@ public class View extends javax.swing.JFrame {
                 System.out.println("in summary text, 3");
                 SummaryText.setText(output);
         }
+
+        //view
+
+
+        public JButton getViewMainButton() {
+
+                return ViewMainButton;
+        }
+        //add property
+        public JButton getNewPropSubmitButton(){
+                return NewPropSubmitButton;
+        }
+
+        //change fees and period
+
+        public JButton getChangefeesbutton(){
+                return Changefeesbutton;
+        }
+        public double getManagerFee() {
+                return Double.parseDouble(FeesManagerField.getText());
+
+        }
+        public int getPeriod() {
+                return Integer.parseInt(PeriodField.getText());
+
+        }
+        public void feePeriodChanged(){
+                JOptionPane.showMessageDialog(this,"Fee and period set!");
+        }
+
 
         // EXTRA
         public void throwError(String error) {
