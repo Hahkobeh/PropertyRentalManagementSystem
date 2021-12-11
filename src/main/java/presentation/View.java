@@ -21,8 +21,8 @@ import javax.swing.table.*;
 public class View extends javax.swing.JFrame {
 
         Object[] data = {
-                        new Integer(5), 6,
-                        "good", new Boolean(false), new Double(105.78)
+                        5, 6,
+                        "good", false, 105.78
 
         };
 
